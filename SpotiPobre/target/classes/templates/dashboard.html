@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        SpotiPobre - Dashboard
+    </title>
+
+    <!-- CSS -->
+    <link
+            rel="stylesheet"
+            href="/style.css?v=2"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- =====================================================
+         MENU LATERAL
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Spoti<span>Pobre</span>
+        </div>
+
+
+        <div class="menu-title">
+            Menu
+        </div>
+
+
+        <nav class="menu">
+
+            <a
+                    href="/dashboard"
+                    class="active"
+            >
+                🏠 Início
+            </a>
+
+
+            <a href="/playlists/nova">
+                ➕ Nova playlist
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
+    <main class="content">
+
+
+        <!-- TOPO -->
+
+        <div class="topbar">
+
+            <h1>
+                Boa música, sem gastar muito.
+            </h1>
+
+
+            <div class="user-badge">
+                🎧 SpotiPobre
+            </div>
+
+        </div>
+
+
+
+        <!-- TÍTULO -->
+
+        <h2 class="section-title">
+            Catálogo de músicas
+        </h2>
+
+
+
+        <!-- =================================================
+             GRID DE MÚSICAS
+             ================================================= -->
+
+        <div class="music-grid">
+
+
+            {{#musicas}}
+
+
+            <div class="music-card">
+
+
+                <!-- CAPA DO ÁLBUM -->
+
+                <div class="album-icon">
+
+                    <img
+                            src="{{imagem}}"
+                            alt="Capa do álbum {{album}}"
+                    >
+
+                </div>
+
+
+
+                <!-- ÁLBUM -->
+
+                <div class="album-name">
+                    {{album}}
+                </div>
+
+
+
+                <!-- ARTISTA -->
+
+                <div class="artist">
+                    {{artista}}
+                </div>
+
+
+
+                <!-- MÚSICA -->
+
+                <div class="song">
+                    {{musica}}
+                </div>
+
+
+
+                <!-- =================================================
+                     FORMULÁRIO DE REPRODUÇÃO
+                     ================================================= -->
+
+                <form
+                        method="post"
+                        action="/reproduzir"
+                >
+
+
+                    <input
+                            type="hidden"
+                            name="id_musica"
+                            value="{{id_musica}}"
+                    >
+
+
+                    <label
+                            for="usuario-{{id_musica}}"
+                    >
+                        Ouvir como
+                    </label>
+
+
+                    <select
+                            id="usuario-{{id_musica}}"
+                            name="id_usuario"
+                    >
+
+                        <option value="1">
+                            Ronaldo
+                        </option>
+
+                        <option value="2">
+                            João
+                        </option>
+
+                        <option value="3">
+                            Maria
+                        </option>
+
+                    </select>
+
+
+                    <button
+                            type="submit"
+                            class="play-button"
+                    >
+                        ▶ Ouvir
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+            {{/musicas}}
+
+
+        </div>
+
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

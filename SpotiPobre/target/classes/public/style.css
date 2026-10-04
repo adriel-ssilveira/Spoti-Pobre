@@ -1,0 +1,452 @@
+/* =========================================================
+   SPOTIPOBRE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    background: #0b0b0d;
+
+    color: #f5f5f5;
+
+    font-family:
+            Arial,
+            Helvetica,
+            sans-serif;
+}
+
+
+/* =========================================================
+   LAYOUT PRINCIPAL
+   ========================================================= */
+
+.app {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    width: 240px;
+
+    background: #050506;
+
+    padding: 28px 20px;
+
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.logo {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 40px;
+}
+
+
+.logo span {
+    color: #1ed760;
+}
+
+
+.menu-title {
+    color: #777;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+
+.menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.menu a {
+    text-decoration: none;
+
+    color: #aaa;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+
+.menu a:hover {
+    background: #1a1a1d;
+
+    color: white;
+}
+
+
+.menu a.active {
+    background: #1a1a1d;
+
+    color: white;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.content {
+    margin-left: 240px;
+
+    width: calc(100% - 240px);
+
+    padding: 35px 45px 100px;
+}
+
+
+/* =========================================================
+   TOPO
+   ========================================================= */
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+
+.topbar h1 {
+    margin: 0;
+
+    font-size: 32px;
+}
+
+
+.user-badge {
+    background: #18181b;
+
+    border: 1px solid #29292d;
+
+    border-radius: 30px;
+
+    padding: 9px 16px;
+
+    color: #ddd;
+}
+
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+.section-title {
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   GRID DE MÚSICAS
+   ========================================================= */
+
+.music-grid {
+    display: grid;
+
+    grid-template-columns:
+            repeat(
+                    auto-fill,
+                    minmax(250px, 1fr)
+            );
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.music-card {
+    background: #151518;
+
+    border: 1px solid #232327;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    transition: 0.2s;
+}
+
+
+.music-card:hover {
+    background: #1b1b1f;
+
+    transform: translateY(-3px);
+
+    border-color: #333338;
+}
+
+
+/* =========================================================
+   CAPA DO ÁLBUM
+   ========================================================= */
+
+.album-icon {
+    height: 250px;
+
+    border-radius: 10px;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+
+.album-icon img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DA MÚSICA
+   ========================================================= */
+
+.album-name {
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+
+.artist {
+    color: #999;
+
+    font-size: 14px;
+
+    margin-bottom: 14px;
+}
+
+
+.song {
+    color: #eee;
+
+    font-size: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   FORMULÁRIOS
+   ========================================================= */
+
+select,
+input[type="text"] {
+
+    width: 100%;
+
+    padding: 11px 13px;
+
+    background: #0e0e10;
+
+    color: white;
+
+    border: 1px solid #333;
+
+    border-radius: 8px;
+
+    outline: none;
+}
+
+
+select:focus,
+input[type="text"]:focus {
+
+    border-color: #1ed760;
+}
+
+
+label {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    background: #1ed760;
+
+    color: #061006;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+
+    transform: scale(1.04);
+
+    background: #27ed6c;
+}
+
+
+.play-button {
+
+    width: 100%;
+
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   PLAYLIST
+   ========================================================= */
+
+.playlist-container {
+
+    max-width: 600px;
+
+    background: #151518;
+
+    border: 1px solid #29292d;
+
+    border-radius: 16px;
+
+    padding: 30px;
+}
+
+
+.form-group {
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR
+   ========================================================= */
+
+.back-link {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #aaa;
+
+    text-decoration: none;
+}
+
+
+.back-link:hover {
+
+    color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+
+        width: 190px;
+    }
+
+
+    .content {
+
+        margin-left: 190px;
+
+        width: calc(100% - 190px);
+
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .sidebar {
+
+        display: none;
+    }
+
+
+    .content {
+
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+    }
+
+
+    .music-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}

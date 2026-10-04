@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpotiPobre - Nova Playlist</title>
+
+    <link rel="stylesheet" href="/style.css?v=2">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Spoti<span>Pobre</span>
+        </div>
+
+        <div class="menu-title">
+            Menu
+        </div>
+
+        <nav class="menu">
+
+            <a href="/dashboard">
+                🏠 Início
+            </a>
+
+            <a href="/playlists/nova" class="active">
+                ➕ Nova playlist
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="content">
+
+        <div class="topbar">
+
+            <h1>
+                Criar playlist
+            </h1>
+
+        </div>
+
+
+        <!-- FORMULÁRIO -->
+        <div class="playlist-container">
+
+            <form method="post" action="/playlists/nova">
+
+                <div class="form-group">
+
+                    <label for="nome">
+                        Nome da playlist
+                    </label>
+
+                    <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Ex.: Minhas favoritas"
+                            required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="publica">
+                        Visibilidade
+                    </label>
+
+                    <select id="publica" name="publica">
+
+                        <option value="true">
+                            Pública
+                        </option>
+
+                        <option value="false">
+                            Privada
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="id_usuario">
+                        Dono da playlist
+                    </label>
+
+                    <select id="id_usuario" name="id_usuario">
+
+                        <option value="1">
+                            Ronaldo
+                        </option>
+
+                        <option value="2">
+                            João
+                        </option>
+
+                        <option value="3">
+                            Maria
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit">
+                    Criar playlist
+                </button>
+
+            </form>
+
+
+            <a
+                    href="/dashboard"
+                    class="back-link"
+            >
+                ← Voltar para o Dashboard
+            </a>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
